@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#app {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Abstand zwischen den Smartphones */
+}
+
+.smartphone {
+    width: 375px; /* Breite des iPhone */
+    height: 667px; /* Höhe des iPhone */
+    background: #333;
+    border-radius: 36px;
+    padding: 16px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.smartphone:before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 5px;
+    background: #999;
+    border-radius: 10px;
+    top: 20px; /* Position des Notch */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.smartphone:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: #222;
+    border-radius: 50%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.smartphone-screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    padding: 16px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+#meal-container-1, #meal-container-2 {
+    margin: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#meal-image-1, #meal-image-2 {
+    max-width: 100%;
+    max-height: 60%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    font-size: 2rem;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    border-color: #888;
+}
+
+.match-result {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: green;
+}
+
+.match-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+}
+
+.match-display img {
+    max-width: 80%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Zusätzliches CSS für das Account-System */
+
+#login-container, #register-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+}
+
+#login-container form, #register-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#login-container input, #register-container input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#login-container button, #register-container button {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+}
+
+#login-container button:hover, #register-container button:hover {
+    background-color: #0056b3;
+}
+
+#show-register, #show-login {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#show-register:hover, #show-login:hover {
+    text-decoration: underline;
+}
+
+#logout-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #FF4136;
+    color: #fff;
+    cursor: pointer;
+}
+
+#logout-button:hover {
+    background-color: #c0392b;
+}
